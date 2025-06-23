@@ -1,14 +1,12 @@
 -- Make line numbers default
 
-
 -- Enable mouse mode, can be useful for resizing splits for example!
-vim.opt.mouse = 'a'
+vim.opt.mouse = "a"
 
 vim.opt.expandtab = true
-vim.opt.shiftwidth = 2
-vim.opt.tabstop = 2
-vim.opt.softtabstop = 2
-
+vim.opt.shiftwidth = 4
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
 
 vim.opt.smarttab = true
 vim.opt.smartindent = true
@@ -32,8 +30,5 @@ vim.opt.signcolumn = "yes"
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 
-
 --vim.opt.list = true
 vim.opt.scrolloff = 10 -- keep minimal lines up-below the current cursor
-
-
