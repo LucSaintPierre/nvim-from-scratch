@@ -1,7 +1,0 @@
---return {
---	"johann2357/nvim-smartbufs",
---	event = "VeryLazy", -- or "BufReadPre" or any event you prefer
---	config = function()
--- plugin setup or keymaps go here
---	end,
---}

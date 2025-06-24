@@ -24,14 +24,6 @@ for i = 1, 9 do
 	end, opts)
 end
 
--- Next / previous buffer
-map("n", "<Right>", function()
-	require("nvim-smartbufs").goto_next_buffer()
-end, opts)
-map("n", "<Left>", function()
-	require("nvim-smartbufs").goto_prev_buffer()
-end, opts)
-
 -- Go to terminal buffers
 for i = 1, 4 do
 	map("n", "<Leader>c" .. i, function()
@@ -99,3 +91,41 @@ vim.keymap.set("v", "<C-z>", "<Esc><Cmd>undo<CR>", { noremap = true, desc = "Und
 -- Remap Ctrl-A to Select All
 vim.keymap.set("n", "<C-a>", "ggVG", { noremap = true, desc = "Select All" })
 vim.keymap.set("i", "<C-a>", "<Esc>ggVG", { noremap = true, desc = "Select All" })
+
+-- CRTL-s to save
+vim.keymap.set("n", "<C-s>", "<Cmd>w<CR>", { noremap = true, desc = "Save file" })
+
+-- using LSP shift to header/source
+vim.keymap.set("n", "<M-S-o>", "<Cmd>ClangdSwitchSourceHeader<CR>", { desc = "Shift source/header" })
+
+-- COMMENT SHORTCUTS --------------------------------------------
+
+-- Toggle comment on current line (normal mode)
+vim.keymap.set("n", "<C-k>c", "<Cmd>Comment<CR>", { desc = "Toggle comment (normal)" })
+
+-- Toggle comment in insert mode (escapes, comments, returns to insert)
+vim.keymap.set("i", "<C-k>c", "<Esc><Cmd>Comment<CR>i", { desc = "Toggle comment (insert)" })
+
+-- Toggle comment on visual selection (visual mode)
+vim.keymap.set("v", "<C-k>c", "<Cmd>CommentMore<CR>", { desc = "Toggle comment (visual)" })
+
+-- CMAKE SHORTCUT ----------------------------------------------
+
+-- Run CMake project
+vim.keymap.set("n", "<F4>", "<Cmd>CMakeRun<CR>", { desc = "Run CMake project" })
+vim.keymap.set("n", "<F5>", "<Cmd>CMakeDebug<CR>", { desc = "Debug CMake project" })
+vim.keymap.set("n", "<F7>", "<Cmd>CMakeBuild<CR>", { desc = "Build CMake project" })
+vim.keymap.set("n", "<F8>", "<Cmd>CMakeBuild[!]<CR>", { desc = "ReBuild CMake project" })
+vim.keymap.set("n", "<F10>", "<Cmd>CMakeGenerate<CR>", { desc = "Generate CMake project" })
+vim.keymap.set("n", "<F11>", "<Cmd>CMakeGenrate[!]<CR>", { desc = "Clean and regenrate CMake project" })
+
+-- SAFE YANK & PASTE -------------------------------------------
+
+-- Yank to register 'a' (safe from deletes)
+vim.keymap.set({ "n", "v" }, "y", '"ay', { desc = "Yank to register a" })
+
+-- Paste from register 'a'
+vim.keymap.set("n", "p", '"ap', { desc = "Paste from register a" })
+
+-- Paste from last delete (register 1) using 'P'
+vim.keymap.set("n", "P", '"1p', { desc = "Paste from last delete" })
