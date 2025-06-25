@@ -32,6 +32,15 @@ return {
 			end,
 			desc = "[F]ind [F]iles in Project Directory",
 		},
+		{
+			"<leader>fs",
+			function()
+				require("fzf-lua").git_files({
+					cmd = "git ls-files '*.c' '*.cpp' '*.h' '*.hpp'",
+				})
+			end,
+			desc = "Find among Git files (.c/.cpp/.h/.hpp)",
+		},
 
 		{
 			"<leader>fg",

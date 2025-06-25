@@ -3,8 +3,8 @@ return {
 	opts = {
 		formatters_by_ft = {
 			cmake = { "cmake-format" },
-			cpp = { "clang-format", args = { "-style=Google" } },
-			c = { "clang-format", args = { "-style=Google" } }, -- Add C files as well, if desired
+			cpp = { "clang-format", args = { "-style=file" } },
+			c = { "clang-format", args = { "-style=file" } }, -- Add C files as well, if desired
 			--
 			lua = { "stylua" },
 			-- Conform will run multiple formatters sequentially
