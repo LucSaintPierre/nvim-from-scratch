@@ -107,7 +107,7 @@ vim.keymap.set("n", "<C-k>c", "<Cmd>Comment<CR>", { desc = "Toggle comment (norm
 vim.keymap.set("i", "<C-k>c", "<Esc><Cmd>Comment<CR>i", { desc = "Toggle comment (insert)" })
 
 -- Toggle comment on visual selection (visual mode)
-vim.keymap.set("v", "<C-k>c", "<Cmd>CommentMore<CR>", { desc = "Toggle comment (visual)" })
+vim.keymap.set("v", "<C-k>c", "<Cmd>Comment<CR>", { desc = "Toggle comment (visual)" })
 
 -- CMAKE SHORTCUT ----------------------------------------------
 
