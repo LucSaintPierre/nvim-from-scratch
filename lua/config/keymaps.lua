@@ -96,7 +96,7 @@ vim.keymap.set("i", "<C-a>", "<Esc>ggVG", { noremap = true, desc = "Select All" 
 vim.keymap.set("n", "<C-s>", "<Cmd>w<CR>", { noremap = true, desc = "Save file" })
 
 -- using LSP shift to header/source
-vim.keymap.set("n", "<M-S-o>", "<Cmd>ClangdSwitchSourceHeader<CR>", { desc = "Shift source/header" })
+vim.keymap.set("n", "<M-S-o>", "<Cmd>LspClangdSwitchSourceHeader<CR>", { desc = "Shift source/header" })
 
 -- COMMENT SHORTCUTS --------------------------------------------
 

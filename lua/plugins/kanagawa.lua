@@ -11,7 +11,7 @@ return {
 			},
 		})
 
-		vim.cmd("colorscheme kanagawa")
+		vim.cmd("colorscheme kanagawa-dragon")
 	end,
 
 	build = function()
