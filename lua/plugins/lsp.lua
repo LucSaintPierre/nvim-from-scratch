@@ -259,6 +259,7 @@ return {
 				"cpplint",
 				"cmakelang",
 				"cmakelint",
+				"codelldb", -- for debugging
 			})
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
